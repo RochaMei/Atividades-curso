@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação segundo grau</title>
+    <style>
+        body {
+            font: 12pt Arial
+        }
+
+        button {
+            font-size: 12pt Arial;
+            padding: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Equação do segundo grau</h1>
+    <button onclick="equacao2()">Clique aqui para efetuar a equação!</button>
+    <section id="res">
+        <p>O resultado irá aparecer aqui!...</p>
+    </section>
+    <script>
+        function equacao2() {
+            let a = Number(window.prompt('Digite um valor para a: '))
+            let b = Number(window.prompt('Digite um valor para b: '))
+            let c = Number(window.prompt('Digite um valor para c: '))
+            delta = b * b - 4 * a * c
+
+            if (delta > 0) {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                let res = document.querySelector('section#res')
+                res.innerHTML = `<p>As raízes são: x1 = <strong>${x1}</strong> e x2 = <strong>${x2}</strong>!</p>`;
+            } else if (delta === 0) {
+                let x = -b / (2 * a);
+                let res = document.querySelector('section#res')
+                res.innerHTML = `<p>A raiz é x = <strong>${x}</strong>!</p>`;
+            } else {
+                let res = document.querySelector('section#res')
+                res.innerHTML = `<p>A equação não possui raízes reais!</p>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

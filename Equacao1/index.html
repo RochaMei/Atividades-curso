@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação primeiro grau</title>
+    <style>
+        body {
+            font: 12pt Arial
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Equação do primeiro grau</h1>
+    <button onclick="equacao()">Clique aqui para iniciar!</button>
+    <section id="res">
+        <p>O resultado irá aparecer aqui!...</p>
+    </section>
+    <script>
+        function equacao() {
+            let a = Number(window.prompt('Digite um valor para a: '))
+            let b = Number(window.prompt('Digite um valor para b: '))
+            equa = b / a
+            let res = document.querySelector('section#res')
+            res.innerHTML = `<p>A solução da equação é x = <strong>${equa}</strong>!</p>`
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando área de triângulo</title>
+    <style>
+        body {
+            font: 12pt Arial
+        }
+
+        button {
+            font-size: 12pt Arial;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculando a área de triângulo</h1>
+    <button onclick="calculando()">Clique aqui para executar o cálculo!</button>
+    <section id="res">
+        <p>O resultado irá aparecer aqui!</p>
+    </section>
+    <script>
+        function calculando() {
+            let base = Number(window.prompt('Digite o valor da base do triângulo: '))
+            let altura = Number(window.prompt('Digite o valor da altura do triângulo: '))
+            area = (base * altura) / 2
+            let res = document.querySelector('section#res')
+            res.innerHTML = `<p>A área deste triângulo equivale a <strong>${area}</strong>!</p>`
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenar</title>
+    <style>
+        body {
+            font: 12pt Arial
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Concatenar</h1>
+    <button onclick="concatenar()">Clique aqui para iniciar!</button>
+    <section id="res">
+        <p>O resultado irá aparecer aqui!...</p>
+    </section>
+    <script>
+
+        function concatenar() {
+            let firstname = prompt('Digite o seu nome: ')
+            let lastname = prompt('Digite o seu sobrenome: ')
+            fullname = firstname + ' ' + lastname
+
+            let res = document.querySelector('section#res')
+            res.innerHTML = `<p>O seu nome é <strong>${fullname}</strong>!</p>`
+        }
+    </script>
+</body>
+
+</html>

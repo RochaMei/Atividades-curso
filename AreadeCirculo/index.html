@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando área de círculo</title>
+    <style>
+        body {
+            font: 12pt Arial
+        }
+
+        button {
+            font-size: 12pt Arial;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculando área de círculo</h1>
+    <button onclick="calculando()">Clique aqui para calcular!</button>
+    <section id="res">
+        <p>O resultado irá aparecer aqui!</p>
+    </section>
+    <script>
+        function calculando() {
+            let raio = Number(window.prompt('Digite o valor do raio: '))
+            let pi = Number(window.prompt('Digite o valor de 𝝅 (ex: 3.14): '))
+            area = pi * (raio * raio)
+            let res = document.querySelector('section#res')
+            res.innerHTML = `<p>A área deste círculo equivale a <strong>${area}</strong>!</p>`
+        }
+    </script>
+</body>
+
+</html>
